@@ -1,18 +1,18 @@
-# 📦 GCS Resumable Upload Wrapper for Android
+# GCS Resumable Upload Wrapper for Android
 
 This library provides a simple and efficient wrapper for performing **resumable uploads to Google Cloud Storage (GCS)** in Android using a session URI. It supports large file uploads, automatic retry, progress callbacks, and easy integration with your app’s UI or business logic.
 
-## ✨ Features
+## Features
 
-- ✅ Google Cloud Storage (GCS) **resumable upload** support  
-- ✅ Supports large file uploads in **chunks** (Default Chunk Size: 30MBs)
-- ✅ Easy integration with just a few lines of code  
-- ✅ Upload progress tracking  
-- ✅ Java/Kotlin compatible  
+- Google Cloud Storage (GCS) **resumable upload** support  
+- Supports large file uploads in **chunks** (Default Chunk Size: 30MBs)
+- Easy integration with just a few lines of code  
+- Upload progress tracking  
+- Java/Kotlin compatible  
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Add the GitHub Packages Maven repository to your `setting.gradle.kts`:
 ```groovy
@@ -29,7 +29,7 @@ dependencies {
     implementation("com.flutteroid.gcsresummableuploadwrapper:1.0.0")
 }
 ```
-## **🚀 Usage**
+## **Usage**
 ```kotlin
 private lateinit var uploadManager: UploadManager
 
@@ -55,18 +55,18 @@ uploadManager = UploadManager.Builder(context = this)
 
 uploadManager.startUpload()
 ```
-## **⏸️ Pausing, Resuming, and Aborting**
+## **Pausing, Resuming, and Aborting**
 You can control the upload process with the following methods:
 ```kotlin
 uploadManager.pauseUpload()   // Pauses the upload
 uploadManager.resumeUpload()  // Resumes the upload
 uploadManager.abortUpload()   // Aborts and cancels the upload session
 ```
-## **✅ Requirements**
+## **Requirements**
 
 -   Android API 21+
 -   A valid Google Cloud OAuth 2.0 access token with https://www.googleapis.com/auth/devstorage.read_write scope
 -   GCS bucket with proper permissions
 
-## 📄 License
+## License
 This project is licensed under the [MIT License](LICENSE).
